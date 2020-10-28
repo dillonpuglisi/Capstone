@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to Dillon's Page
 
-You can use the [editor on GitHub](https://github.com/dillonpuglisi/Capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I can use the [editor on GitHub](https://github.com/dillonpuglisi/Capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Whenever I commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in my site, from the content in my Markdown files.
 
 ### Markdown
 
