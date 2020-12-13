@@ -1,17 +1,13 @@
----
-youtubeId: yP_9FClqQ1s
----
 
 ## CS-499-X2150 Computer Science Capstone 20EW2 for Dillon Puglisi
 
 
 # Self-Assessment
 
+
 # Code Review
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yP_9FClqQ1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-{% include youtubePlayer.html id=page.youtubeId %}
+Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1s).
 
 # ePortfolio
 
