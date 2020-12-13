@@ -4,7 +4,7 @@
 
 ## Self-Assessment and ePortfolio
 
-Word document can be found [here](https://github.com/dillonpuglisi/Capstone/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx) or [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
+Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx?raw=true).
 The code below is described in greater detail in this document. 
 
 ## Code Review
@@ -17,7 +17,8 @@ Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1
 
 For this enhancement, the Add/Edit notes system was updated from postback functions to WebMethods, for a more seamless user experience.
 
-Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/Milestone%20Two%20code%20files.zip).
+Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/Milestone%20Two%20code%20files.zip?raw=true).
+Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Two%20code%20files.zip?raw=true).
 
 Part of the updated javascript to execute the creation of a new note record: 
 ```javascript
