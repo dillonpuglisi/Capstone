@@ -1,4 +1,20 @@
-## Welcome to Dillon's Page
+## CS-499-X2150 Computer Science Capstone 20EW2 for Dillon Puglisi
+
+
+# Self-Assessment
+
+# Code Review
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yP_9FClqQ1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# ePortfolio
+
+
+
+
+
+
+
 
 I can use the [editor on GitHub](https://github.com/dillonpuglisi/Capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
