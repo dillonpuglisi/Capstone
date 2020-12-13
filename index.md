@@ -156,7 +156,7 @@ BASIC INFO
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Four%20code%20files.zip).
 
-```MSSQL
+```MySQL
 
 -- =============================================
 -- Author:		DP
