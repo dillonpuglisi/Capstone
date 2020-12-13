@@ -6,6 +6,7 @@
 
 Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
 
+![GitHub Logo](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Capture2.JPG)
 
 ## Code Review
 
