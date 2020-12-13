@@ -1,20 +1,22 @@
 
-## CS-499-X2150 Computer Science Capstone 20EW2 for Dillon Puglisi
+# CS-499-X2150 Computer Science Capstone 20EW2 for Dillon Puglisi
 
 
-# Self-Assessment and ePortfolio
+## Self-Assessment and ePortfolio
 
 Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
 
 
-# Code Review
+## Code Review
 
 Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1s).
 
-# ePortfolio
+## ePortfolio
 
+## Enhancement 3: Database
 
-
+```markdown
+Syntax highlighted code block
 
 
 
