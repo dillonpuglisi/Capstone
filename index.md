@@ -15,6 +15,77 @@ Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1
 
 ### Enhancement 1: Software Design and Engineering
 
+BASIC INFO
+
+```markdown
+//11/15/20 9:06a-9:09a
+//take in inputs from form, attempt to create note record
+function AddNote_Submit() {
+    var obj = {};
+    obj.Title = $("#AddNote_TitleInput").val();
+    obj.Note = $("#AddNote_NotesInput").val();
+    obj.Encrypt = $("#AddNote_EncryptInput").is(':checked');
+    if (obj.Encrypt == true)
+	obj.Password = $("#PasswordInput").val();
+    else
+	obj.Password = "";
+    //run condenced external function that submits AJAX call
+    RunFunction("AddNote_Submit()", obj, "Notes.aspx/AddNoteReturnID", ["startsWith", "Error"],
+	function () {
+	    //CloseModal("AddEditNoteForm");
+	    //UpdateNotesTable();
+	    //$("#EditNote").css('border', '2pt solid green'); //highlight the edit textarea in green to show successful update
+	    // $("#UpdateDateLbl").html(GetDate2());   //update the "Last Edited" timestamp displayed
+	    window.location.href = "Notes.aspx?noteid=" + data.d; //redirect to edit page for that note record
+	}, null);
+}
+```
+BASIC INFO
+
+```markdown
+//11/15/20 9:12a-9:15a
+[WebMethod]
+//take in note info (title, note content, whether or not it should be encrypted and a password), and create Notes record; return either Error OR NEW ID
+public static String AddNoteReturnID(String title, Boolean encrypt, String password, String note)
+{
+    //check integrity of inputs
+    if (MyString.IsBlank(title))
+	return "Error: missing note title";
+    if (MyString.IsBlank(note))
+	return "Error: missing note content";
+    if (encrypt && MyString.IsBlank(password))
+	return "Error: cannot encrypt without password";
+
+    try //wrapped in try/catch
+    {
+	//instantiate new SqlCommand with insert query
+	string sqlstring = "INSERT INTO Notes (Title,DateCreated, Note,Active, encrypted) VALUES (@Title,@DateCreated,@Note,'true',@encrypted);SELECT SCOPE_IDENTITY() AS newID;";
+	SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP_DB"].ConnectionString);
+	SqlCommand cmd = new SqlCommand(sqlstring, con);
+	//attach parameter values to command obj
+	cmd.Parameters.AddWithValue("@Title", title);
+	cmd.Parameters.AddWithValue("@DateCreated", MyNet.GetEasternDateTime());
+	cmd.Parameters.AddWithValue("@Note", (encrypt ? StringCipher.Encrypt(note, password) : note)); //if note should be encrypted per user input, encrypt it using given password
+	con.Open();
+	System.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader(); //need to execute as Reader so the new ID can be retrieved
+	String newID = "-2";
+	while (reader.Read())
+	    newID = reader["newID"].ToString();
+
+	con.Close();
+	if (newID.Contains("-")) //if read() loop never run, return failure message
+	    return "Error: no new ID returned: " + newID;
+	return newID;
+    }
+    catch (Exception exc)
+    {
+       // MyException.HandleException(DateTime.Now, System.Reflection.MethodBase.GetCurrentMethod().Name, "", exc);
+	return "Error: " + exc.Message + "; " + exc.StackTrace;
+    }
+}
+```	
+	
+
 ### Enhancement 2: Algorithms and Data Structure
 
 BASIC INFO
