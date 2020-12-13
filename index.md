@@ -11,9 +11,73 @@ Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob
 
 Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1s).
 
-## ePortfolio
+## Code Snippets
+
+### Enhancement 1: Software Design and Engineering
+
+### Enhancement 2: Algorithms and Data Structure
+
+BASIC INFO
+
+```markdown
+//11/22/20 9:27a-9:44a
+function BuildFieldCustomizations(fields) {
+    output = "";
+    console.log("fields: ", fields);
+    //output += "//" + table;
+    output += "//" + AppendToListItems(fields, "", "", ",") + "\n\n";
+    output += "<table>";
+    output += "<thead><tr>";
+    output += "<th>Field</th>";
+    output += "<th>isPk</th>";
+    output += "<th>isEditable</th>";
+    output += "<th>Datatype</th>";
+    output += "</tr>";
+    for (var i = 0; i < fields.length; i++) { //loop through each item in array
+        output += "<tr>";
+        output += "<th>" + fields[i] + "</th>";
+        if (i == 0)
+            checked = " checked ";
+        else
+            checked = "";
+        output += "<td><input type='radio' name='SQLScriptFieldCustomizations_isPKRadio' id='SQLScriptFieldCustomizations_isPKRadio" + i + "' value='" + i + "' " + checked + "/></td>";
+        output += "<td><input type='checkbox' id='SQLScriptFieldCustomizations_isEditableCheck" + i + "' value='" + i + "' checked='checked'/></td>";
+        output += "<td><select id='SQLScriptFieldCustomizations_DatatypeInput" + i + "' onchange=\"SQLScriptFieldCustomizations_DatatypeInputChanged('" + i + "')\">" +
+            "<option value='Text'>Text</option>" +
+            "<option value='Number'>Number</option>" +
+            "<option value='Bit'>Bit/Bool</option>" +
+            "<option value='Date'>Date</option>" +
+            "<option value='DateTime'>DateTime</option>" +
+            "</select>" + 
+            "<div id='FieldOptions_Text" + i + "'>" + 
+                "Char Limit: <input type='number' id='FieldOptions_TextCharLimit" + i + "' style='width:55px;'/>  " + 
+            "</div>" + 
+            "<div id='FieldOptions_Number" + i + "' style='display:none;'>" +
+                "Step (1, 0.1, 0.01, etc): <input type='number' id='FieldOptions_NumberStep" + i + "' style='width:55px;'/>  " +
+                "Min: <input type='number' id='FieldOptions_NumberMin" + i + "' style='width:55px;'/>  " +
+                "Max: <input type='number' id='FieldOptions_NumberMax" + i + "' style='width:55px;'/>  " + 
+            "</div>" + 
+            "<div id='FieldOptions_Bit" + i + "' style='display:none;'>" + 
+                "Default: <input type='checkbox' id='FieldOptions_BitDefault" + i + "' />  " + 
+            "</div>" + 
+            "<div id='FieldOptions_Date" + i + "' style='display:none;'>" + //doesn't currently need any additional fields
+            "</div>" + 
+            "<div id='FieldOptions_DateTime" + i + "' style='display:none;'>" + //doesn't currently need any additional fields
+            "</div>" + 
+            "</td>";
+        output += "</tr>";
+    }
+    output += "</thead>";
+    output += "</table>";
+
+    return output;
+
+}
+```
 
 ### Enhancement 3: Database
+
+BASIC INFO
 
 ```markdown
 
@@ -62,7 +126,7 @@ BEGIN
 END
 ```
 
-
+=========================================================================================================================================
 
 
 I can use the [editor on GitHub](https://github.com/dillonpuglisi/Capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
