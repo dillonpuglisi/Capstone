@@ -154,7 +154,7 @@ function BuildFieldCustomizations(fields) {
 
 Resulting Form:
 
-![WebTools form](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/WebToolsFieldForm.png)
+![WebTools form](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/WebToolsFieldForm.png?raw=true)
 
 ============================================================================================
 
@@ -166,7 +166,7 @@ Full code files and supporting screenshots can be found [here](https://github.co
 
 Notes Audit Log table design:
 
-![Audit Log Design](https://github.com/dillonpuglisi/Capstone/NotesAuditLogTableDesign.JPG)
+![Audit Log Design](https://github.com/dillonpuglisi/Capstone/NotesAuditLogTableDesign.JPG?raw=true)
 
 MSSQL code for creating the trigger, which will log any INSERT/UPDATE/DELETE action performed on the Notes table: 
 ```MySQL
@@ -217,7 +217,7 @@ END
 ```
 Testing Audit Log after trigger installed, note file created, edited, then deleted:
 
-![Audit Log example](https://github.com/dillonpuglisi/Capstone/NotesAuditLogLogs.JPG)
+![Audit Log example](https://github.com/dillonpuglisi/Capstone/NotesAuditLogLogs.JPG?raw=true)
 
 
 
