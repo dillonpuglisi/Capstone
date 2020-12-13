@@ -6,7 +6,10 @@
 
 Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
 
-![GitHub Logo](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Capture2.JPG)
+
+
+
+
 
 ## Code Review
 
@@ -151,11 +154,17 @@ function BuildFieldCustomizations(fields) {
 }
 ```
 
+Resulting Form:
+![WebTools form](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/WebToolsFieldForm.png)
+
 ### Enhancement 3: Database
 
 BASIC INFO
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Four%20code%20files.zip).
+
+Notes Audit Log table design:
+![Audit Log Design](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/NotesAuditLogTableDesign.JPG)
 
 ```MySQL
 
@@ -203,6 +212,8 @@ BEGIN
 		
 END
 ```
+Testing Audit Log after trigger installed:
+![Audit Log example](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/NotesAuditLogLogs.JPG)
 
 ============================================================================================
 
