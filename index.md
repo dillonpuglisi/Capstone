@@ -155,6 +155,7 @@ function BuildFieldCustomizations(fields) {
 ```
 
 Resulting Form:
+
 ![WebTools form](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/WebToolsFieldForm.png)
 
 ### Enhancement 3: Database
@@ -164,6 +165,7 @@ BASIC INFO
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Four%20code%20files.zip).
 
 Notes Audit Log table design:
+
 ![Audit Log Design](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/NotesAuditLogTableDesign.JPG)
 
 ```MySQL
@@ -212,7 +214,8 @@ BEGIN
 		
 END
 ```
-Testing Audit Log after trigger installed:
+Testing Audit Log after trigger installed, note file created, edited, then deleted:
+
 ![Audit Log example](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/NotesAuditLogLogs.JPG)
 
 ============================================================================================
