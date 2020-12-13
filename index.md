@@ -5,11 +5,7 @@
 ## Self-Assessment and ePortfolio
 
 Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
-
-
-
-
-
+The code below is described in greater detail in this document. 
 
 ## Code Review
 
@@ -19,10 +15,11 @@ Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1
 
 ### Enhancement 1: Software Design and Engineering
 
-BASIC INFO
+For this enhancement, the Add/Edit notes system was updated from postback functions to WebMethods, for a more seamless user experience.
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Two%20code%20files.zip).
 
+Part of the updated javascript to execute the creation of a new note record: 
 ```javascript
 //11/15/20 9:06a-9:09a
 //take in inputs from form, attempt to create note record
@@ -46,8 +43,8 @@ function AddNote_Submit() {
 	}, null);
 }
 ```
-BASIC INFO
 
+Part of the backend, C# code to take in the information from the above javascript function and create a new note record, returning its ID: 
 ```C#
 //11/15/20 9:12a-9:15a
 [WebMethod]
@@ -94,10 +91,11 @@ public static String AddNoteReturnID(String title, Boolean encrypt, String passw
 
 ### Enhancement 2: Algorithms and Data Structure
 
-BASIC INFO
+For this enhancement, I improved the logic and structure of my collection of algorithms that generate code for me given some basic information about the SQL table that code needs to communicate with.
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Three%20code%20files.zip).
 
+Part of the new javascript code that takes in the list of fields for the given SQL table and generates a form with customization options for each field:
 ```C#
 //11/22/20 9:27a-9:44a
 function BuildFieldCustomizations(fields) {
@@ -162,7 +160,7 @@ Resulting Form:
 
 ### Enhancement 3: Database
 
-BASIC INFO
+For this enhancement, I improved data security and integrity by creating a trigger to handle the logging of audit data for adding/editing/deleting notes records in the database.
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Four%20code%20files.zip).
 
@@ -170,6 +168,7 @@ Notes Audit Log table design:
 
 ![Audit Log Design](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/NotesAuditLogTableDesign.JPG)
 
+MSSQL code for creating the trigger, which will log any INSERT/UPDATE/DELETE action performed on the Notes table: 
 ```MySQL
 
 -- =============================================
