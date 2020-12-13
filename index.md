@@ -4,7 +4,7 @@
 
 # Self-Assessment and ePortfolio
 
-Code review video can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
+Word document can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Final%20Project%20ePortfolio%20and%20Self-Assessment.docx).
 
 
 # Code Review
