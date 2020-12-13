@@ -2,7 +2,9 @@
 ## CS-499-X2150 Computer Science Capstone 20EW2 for Dillon Puglisi
 
 
-# Self-Assessment
+# Self-Assessment and ePortfolio
+
+Code review video can be found [here](Final Project ePortfolio and Self-Assessment.docx).
 
 
 # Code Review
