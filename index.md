@@ -19,7 +19,7 @@ BASIC INFO
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Two%20code%20files.zip).
 
-```markdown
+```javascript
 //11/15/20 9:06a-9:09a
 //take in inputs from form, attempt to create note record
 function AddNote_Submit() {
@@ -44,7 +44,7 @@ function AddNote_Submit() {
 ```
 BASIC INFO
 
-```markdown
+```C#
 //11/15/20 9:12a-9:15a
 [WebMethod]
 //take in note info (title, note content, whether or not it should be encrypted and a password), and create Notes record; return either Error OR NEW ID
@@ -94,7 +94,7 @@ BASIC INFO
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Three%20code%20files.zip).
 
-```markdown
+```C#
 //11/22/20 9:27a-9:44a
 function BuildFieldCustomizations(fields) {
     output = "";
@@ -156,7 +156,7 @@ BASIC INFO
 
 Full code files and supporting screenshots can be found [here](https://github.com/dillonpuglisi/Capstone/blob/gh-pages/Milestone%20Four%20code%20files.zip).
 
-```markdown
+```MSSQL
 
 -- =============================================
 -- Author:		DP
@@ -203,7 +203,7 @@ BEGIN
 END
 ```
 
-=========================================================================================================================================
+============================================================================================
 
 
 I can use the [editor on GitHub](https://github.com/dillonpuglisi/Capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
