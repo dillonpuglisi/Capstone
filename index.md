@@ -13,11 +13,54 @@ Code review video can be found [here](https://www.youtube.com/watch?v=yP_9FClqQ1
 
 ## ePortfolio
 
-## Enhancement 3: Database
+### Enhancement 3: Database
 
 ```markdown
-Syntax highlighted code block
 
+-- =============================================
+-- Author:		DP
+-- Create date: 11/23/20 -9:46a
+-- Description:	executed upon insert/update/delete into Notes table, stores audit log in separate table including before/after values
+-- =============================================
+ALTER TRIGGER [dbo].[Notes_LogAudit] on [dbo].[Notes] 
+   AFTER INSERT,DELETE,UPDATE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	--determine what operation was run
+	--REF: https://stackoverflow.com/questions/741414/insert-update-trigger-how-to-determine-if-insert-or-update
+	DECLARE @Operation as nvarchar(50);
+    SET @Operation = (
+		CASE WHEN EXISTS(SELECT * FROM INSERTED) AND EXISTS(SELECT * FROM DELETED)
+			THEN 'Update'  
+		WHEN EXISTS(SELECT * FROM INSERTED)
+			THEN 'Insert' 
+		WHEN EXISTS(SELECT * FROM DELETED)
+			THEN 'Delete'  
+		ELSE NULL -- ie failed deletion operation?   
+    END)
+
+	--get before/after values from inserted/deleted tables
+	declare @NoteID1 int 
+	declare @NoteID2 int 
+	declare @Title1 nvarchar(MAX) --before update/delete 
+	declare @Title2 nvarchar(MAX) --after update/insert
+
+	declare @Note1 nvarchar(MAX) --before update/delete 
+	declare @Note2 nvarchar(MAX) --after update/insert
+
+	select @NoteID1=NoteID, @Title1=Title, @Note1=Note from inserted
+	select @NoteID2=NoteID, @Title2=Title, @Note2=Note from deleted
+
+	--insert log into audit table
+    insert into Notes_AuditLog (NoteID_ins, NoteID_del, timestamp, Operation, Title_ins, Title_del, Note_ins, Note_del) 
+		VALUES (@NoteID1, @NoteID2, GETDATE(),@Operation, @Title1, @Title2, @Note1, @Note2 )
+		
+END
+```
 
 
 
